@@ -22,6 +22,9 @@
 %\usepackage{amsmath} % assumes amsmath package installed
 %\usepackage{amssymb}  % assumes amsmath package installed
 
+\usepackage[pdftex]{graphicx}
+%\graphicspath{}
+
 \title{\LARGE \bf
 Influence of child-robot spacial arrangement in a learning by teaching task}
 
@@ -66,13 +69,21 @@ We have 3 conditions following Kendon's F formation:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{INTRODUCTION}
-Cowriter
+Interaction settings are crucial for 
+
+The Co-Writer projects aims to help children with difficulties in handwriting \cite{hood2015when}. 
+It is based on the idea of learning by teaching. 
+By teaching a Nao robot how to write, children learn and improve their handwriting. 
+The activity also plays with the protégé effect that make children more motivated in practising for the robot than for themselves. 
+
+Previous studies in the Co-Writer project helped us to develop a system that generates handwriting for the robot based on demonstrations from the child\cite{hood2015when}. 
+Case studies presented in \cite{jacq2016building} showed that children were able to stay engaged in long term interaction with repeated session within the Co-Writer activity in real pedagogical/therapeutic contexts. 
+These works proved to have a positive effect on extrinsic motivation of children when practising their handwriting thanks to the protégé effect. 
+
+
 
 In this activity the child plays the role of a teacher. 
 
-
-
-\section{RELATED WORKS}
 Proxemics
 
 Role attribution
@@ -81,9 +92,38 @@ Kendon F Formation in HRI
 \cite{huttenrauch2006investigating}
 
 We propose to study the impact of spatial arrangement on engagement of children a handwriting task
-\section{APPROACH}
 
-within subject, 2 robots in front of the child who has to teach to the two robots
+
+\section{RELATED WORKS}
+
+
+Perspective taking: speaker with partners tend yo use more egocentric perspective rather than solo speakers \cite{Schober} 
+
+Handwriting linked to spatial-sequential ability of the child. 
+This is also linked to perspective taking ability of the child. 
+
+The 3 spatial perspective taking rules state that :
+\begin{enumerate}
+\item any object will present the same visual appearance to the self and to another person if the two observer view from the same point of view.
+\item An object with different sides will be seen different if the viewers are form different side views
+\item An object homogeneous in all sides will be the same from different view. 
+\end{enumerate}
+
+
+
+
+\cite{Newcombe1992} shows that children around the age of 5 are able to complete perspective taking tasks and to imagine what others point of you might look like.
+
+
+
+
+\section{APPROACH}
+In this study, each child saw interacted with the robot in the two conditions in a random order. 
+
+
+within subjects Repeated measures 
+
+
 
 
 Hypothesis
@@ -97,22 +137,40 @@ Hypothesis
 
 
 \section{METHOD}
+25
+
 Number of child
 Expe settings
 Condition within subject but with 
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{./figures/s2s_photo.jpg}
+\caption[Side by SIde Condition]{}
+\caption{}
+\label{fig:s2s_photo}
+\end{figure}
+
 
 \section{RESULTS}
 
-\subsection{Seriousness}
+\subsection{Reward Mechanism}
+The table interface on which the child and the robot practice their handwriting contains also two buttons that allow the child to give positive (green thumb-up) or negative (red thumb-down) feeback to the robot's handwriting.
+
+We noticed that children were expetcing the robot to react. 
+Now that the usage of these buttons have been proven, we will consider for futur experimemnt to allow the robot to react. 
+For instance, if the child gives a positive feedback when the robot is actually improving, the robot should display a positive emotion.
+If he is given a positive feedback but doesnt not actually make any progree, he might express doubt to force the child to be more exigeant. 
+
 
 \subsection{With-me-ness}
+\cite{lemaignan2016realtime}
 Present it as a measure of synchrony, 
 
 Get time when robot looking where and see if similar pattern with child
 
 \subsection{Performances}
 
-\subsection{Questionnaire on likeability and Interrelationship}
+%\subsection{Questionnaire on likeability and Interrelationship}
 
 \section{CONCLUSIONS}
 
