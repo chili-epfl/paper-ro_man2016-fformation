@@ -23,6 +23,7 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \usepackage[pdftex]{graphicx}
+
 %\graphicspath{}
 
 \title{\LARGE \bf
@@ -52,10 +53,10 @@ Influence of child-robot spacial arrangement in a learning by teaching task}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 In this paper we present a study in which we test the influence of child-robot spatial arrangement on child's focus of attention, child's perception of robot's performance in the CoWriter learning by teaching activity.
-In this activity the child teaches a Nao obot how to handwrite. 
+In this activity the child teaches a Nao robot how to handwrite. 
 In our study, we explore two spatial condition from Kendon's F formation, the side-by-side and the face-t-face formations. 
 
-We have 3 conditions following Kendon's F formation: 
+We have 2 conditions following Kendon's F formation: 
 \begin{itemize}
 \item side by side
 \item face to face
@@ -71,6 +72,9 @@ We have 3 conditions following Kendon's F formation:
 \section{INTRODUCTION}
 Interaction settings are crucial for 
 
+Robots to enhance childhood education
+
+
 The Co-Writer projects aims to help children with difficulties in handwriting \cite{hood2015when}. 
 It is based on the idea of learning by teaching. 
 By teaching a Nao robot how to write, children learn and improve their handwriting. 
@@ -80,15 +84,20 @@ Previous studies in the Co-Writer project helped us to develop a system that gen
 Case studies presented in \cite{jacq2016building} showed that children were able to stay engaged in long term interaction with repeated session within the Co-Writer activity in real pedagogical/therapeutic contexts. 
 These works proved to have a positive effect on extrinsic motivation of children when practising their handwriting thanks to the protégé effect. 
 
+\cite{Matsuzoe2012} had a similar approach than learning by teaching with their Care Receiving Robot that was being taken cared off and taugh by a child with physical interaction. 
 
 
-In this activity the child plays the role of a teacher. 
 
-Proxemics
+Proxemics : explain how spatial arrangement could influence the interaction
 
 Role attribution
 
-Kendon F Formation in HRI
+Kendon F Formation in HRI: explain how spatial arrangement had influences in the past
+
+Spatial arrangement is also a social signal that tells about the relationship between the persons.
+
+
+
 \cite{huttenrauch2006investigating}
 
 We propose to study the impact of spatial arrangement on engagement of children a handwriting task
@@ -124,8 +133,6 @@ In this study, each child saw interacted with the robot in the two conditions in
 within subjects Repeated measures 
 
 
-
-
 Hypothesis
 \begin{itemize}
 \item Child feels more in a teacher student relationship when facing the robot
@@ -142,35 +149,51 @@ Hypothesis
 Number of child
 Expe settings
 Condition within subject but with 
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{./figures/s2s_photo.jpg}
-\caption[Side by SIde Condition]{}
-\caption{}
-\label{fig:s2s_photo}
+\begin{figure}[t!]
+    \centering
+        \includegraphics[height=1.2in]{./figures/f2f_photo.png}
+        \caption{Face to face spatial formation}
+   ~
+        \includegraphics[height=1.2in]{./figures/s2s_photo2.jpg}
+        \caption{Side by Side spatial formation}
 \end{figure}
 
 
-\section{RESULTS}
-
 \subsection{Reward Mechanism}
-The table interface on which the child and the robot practice their handwriting contains also two buttons that allow the child to give positive (green thumb-up) or negative (red thumb-down) feeback to the robot's handwriting.
+The table interface on which the child and the robot practice their handwriting contains also two buttons that allow the child to give positive (green thumb-up) or negative (red thumb-down) feedback to the robot's handwriting.
 
-We noticed that children were expetcing the robot to react. 
-Now that the usage of these buttons have been proven, we will consider for futur experimemnt to allow the robot to react. 
+We noticed that children were expecting the robot to react. 
+Now that the usage of these buttons have been proven, we will consider for future experiment to allow the robot to react. 
 For instance, if the child gives a positive feedback when the robot is actually improving, the robot should display a positive emotion.
-If he is given a positive feedback but doesnt not actually make any progree, he might express doubt to force the child to be more exigeant. 
+If he is given a positive feedback but doesn’t not actually make any progress, he might express doubt to force the child to be more exigent. 
 
 
 \subsection{With-me-ness}
-\cite{lemaignan2016realtime}
+The with-me-ness measure applied in HRI in \cite{lemaignan2016realtime}, helps to set specific targets during each state of the interaction and to determine rather the user is looking at one of these targets or not. 
+The algorithm is based on the d-lib library that helps to estimate the head pose of the user using a video from webcam device for instance.
+
+This measure allow us to see if the child is engage in the interaction and is looking at the tablet or the robot's head when he/she should.
+
+For this experiment, the targets where: "the observer"(a teacher or a teacher assistant), "the selection tablet"(the tablet used to pick a word), 
+
 Present it as a measure of synchrony, 
 
 Get time when robot looking where and see if similar pattern with child
 
 \subsection{Performances}
 
-%\subsection{Questionnaire on likeability and Interrelationship}
+
+\section{RESULTS}
+
+\subsection{Reward Mechanism}
+ 
+
+
+\subsection{With-me-ness}
+
+
+\subsection{Performances}
+
 
 \section{CONCLUSIONS}
 
@@ -194,14 +217,17 @@ Get time when robot looking where and see if similar pattern with child
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{ACKNOWLEDGMENT}
-
+This research was partially supported by the Funda\c{c}\~{a}o para a Ci\^{e}ncia
+e a Tecnologia (FCT) with reference UID/CEC/ 50021/2013, and by the Swiss
+National Science Foundation through the National Centre of Competence in
+Research Robotics.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-ref all cowriter paper + paper of sharma sur withmeness
+
 
 \bibliographystyle{abbrv}
 \bibliography{fformation_cowriter}
