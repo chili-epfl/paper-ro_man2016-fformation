@@ -235,36 +235,41 @@ Apart from this change in the spatial setting, the interaction was kept the same
 The children were told they had to teach the robot how to write some words. 
 We briefly presented the two tablet interfaces and the interaction started.
 Any word from a list displayed on the selection tablet could be picked by the child.
-As the robot would start to write this word, it was set to be a very bad writer at the beginning of the first session for each child.
-The child could then give a feedback to the robot by pressing either a thumbs up or a thumbs down button.
+As the robot would start to write this word. It was set to be a very bad writer at the beginning of the first session for each child.
+The child could then give a feedback to the robot by pressing thumbs up or a thumbs down buttons how many time they wanted.
 The child would then use a pen and demonstrate how to write the word and the robot would then rewrite the word using the demonstration of the child.
 The generated writing of the robot was computed to be halfway from its previous writing state and the new demonstration provided by the child.
 
-Several hypothesis were made concerning the influence of the spatial arrangement on the interaction.
+Several hypotheses were made concerning the influence of the spatial arrangement on the interaction.
 We expected that the gaze behaviour of the child would vary according to the spatial configuration.
-More gazing at the robot's head would be eased in the face-to-face condition.
-Our research question was to measure the degree to which this also influenced the way children behaved as a teacher (were they more or less severe with the robot facing them)
-Because of this influence of facing the robot and being able to see its head, we also believed that the robot would be perceived as more competent in the face to face condition and hence collect more positive feedback from the child.
-Indeed some previous studies have shown that social appearance \cite{goetz2003matching} has an influence on the perceived competences.
+More gazing at the robot's head would be expected in the face-to-face condition.
+Our research question was to measure the degree to which this also influenced the way children behaved as a teacher (were they more or less severe with the robot facing them).
+As children give a feedback to the robot for each demonstratation, we intend to measure if there is any difference between vis-a-vis and side-by-side regarding this feedback (does the side-by-side condition trigger more positive feedback?).
+%Because of this influence of facing the robot and being able to see its head, we also believed that the robot would be perceived as more competent in the face to face condition and hence collect more positive feedback from the child.
+%Indeed some previous studies have shown that social appearance \cite{goetz2003matching} has an influence on the perceived competences.
 
 The engagement of the child in the task can also be influenced by the arrangement.
 For that particular aspect, we will measure the number of repetitions of each word, as well as the with-me-ness, which is discussed in the following section.
-
+Since children were quite young, we choose to not use any self-reported measures or questionnaires.
 
 
 \subsection{With-me-ness}
-The with-me-ness introduced in HRI by \cite{lemaignan2016realtime}, helps to set specific targets during each state of the interaction and to determine whether the user is looking at one of these targets or not.
+The with-me-ness introduced in HRI by \cite{lemaignan2016realtime}, helps to set specific targets during each state of the interaction and to determine whether the user is looking at one of these attentional targets or not.
 The algorithm is based on the \textit{d-lib library} that helps to estimate the head pose of the user using a video from a webcam device for instance.
 From this head pose, the visual focus of attention (VFoA) is computed.
-The inclusion of the targets in the VFoA allows then to compute the with-me-ness.
-In a simple way, the with-me-ness value will increase if the child looks at the specific set of targets, or else it decreases.
+The inclusion of the targets in the VFoA allows then to compute the \emph{with-me-ness}.
+In a simple way, the \emph{with-me-ness} value will increase if the child looks at the specific set of targets, or else it decreases.
 This measure allows us to see if the child is engaged in the interaction and is looking at the tablet or the robot's head when he/she should.
+Indeed, in our learning by teaching activity, the robot has also a hidden pedagological role. It's progress aim actually to make the child practice and think about his/her own way of writing. 
+In that sens, we can set attentional targets as proposed by \cite{sharma2014me} when the \emph{with-me-ness} was first introduced for Computer Supported Collaborative Learning.
+
 This measure is actually very close to the notion of synchrony already studied in HRI \cite{delaherche2012interpersonal}, where bounding between individuals is reflected by their ability to synchronize in the task (look at the same time at the same targets).
 
-For this experiment, the targets where: "the observer"(a teacher or a teacher assistant),"the experimenter",  "the selection tablet"(the tablet used to pick a word) and the "tablet".
+For this experiment, the targets were: "the observer"(a teacher or a teacher assistant),"the experimenter",  "the selection tablet"(the tablet used to pick a word) and the "tablet".
 The with-me-ness is initially set to 0.5 and takes values from 0 to 1.
 According to the state in which the activity is, (robot is writing, child is writing,\dots) the with-me-ness will be increased if the child looks at a target that is in the set of targets that are optimum within this particular state of the activity.
 We record these targets and the with-me-ness at a frequency of about $1Hz$.
+The evolution of the withmeness is computationaly attenuated in order to remove noisy data and we set a weight on the update at 10\% (90\% is the previous state).
 
 
 The targets are defined according to their spatial relation with the camera used (placed on the table at the robot's feet).
@@ -293,14 +298,19 @@ These measure were cues to how dedicated the child was in the task
 
 \subsubsection{Writing Score for the Robot}
 %Regularity of writing in time
-Since the learning algorithm took as input the child's demonstration, if the child provided repeatedly the exact same demonstration, then the robot would converge faster to their handwriting.
-This score is hence a hint on children's regularity, with the underlying assumption that a child is sure of the fact that his handwriting is more regular.
-Also, since children are teaching the robot, they might judge the robot's handwriting according to their provided demonstration.
+Since the learning algorithm took as input the child's demonstration, if the child provided repeatedly the exact same demonstration, then the robot would converge faster to his/her handwriting.
+This score is hence a hint on children's regularity, with the underlying assumption that the regularity handwriting is a sign of progress.
+Since children are teaching the robot, they may judge the robot's handwriting according to their provided demonstration, and compare simply their demonstration with the robot's.
 
-The score for the generated letter by the robot was obtained by the distance between the same demonstrated letter by the child and the generated letter.
-We finally computed the evolution of this score compare to the previous for each demonstrated word.
-We then represented the evolution of the robot's handwriting with different states:
-'S=': the first trial of this word by the robot, 'S-': the score decreases and 'S+' the score increases. 
+At each demonstration of the robot, we were calculating a \emph{writing score}. 
+Each demonstration was encoded as a list of seventy 2D points.
+This \emph{writing score} is the euclidian distance between the demonstrated letter by the child and the generated letter by the robot.
+
+We also computed the evolution of this score at each demonstration.
+We represent the evolution of the robot's handwriting with different states:
+'S=': the first trial of this word by the robot, 'S-': the score is decreasing and 'S+' the score is increasing. 
+If the child change a lot his/her way of writing between consecutives demonstration, the score would then deacrease.
+In the contrary, the regularity of the demonstration would make the score increase rapidly.
 
 
 \section{RESULTS}
@@ -312,18 +322,18 @@ We studied the impact on the F-formation on the reward given with the buttons, t
 \subsection{Reward Mechanism}
 Children well understood that they were teaching the robot and often gave bad scores for the first untrained trial of the robot.
 Children gave feedback with an average of 3 feedbacks per demonstration.
-Figure \ref{fig:uf_nb} shows the evolution of the sum of feedbacks given for all repeated word for each demonstration.
+Figure \ref{fig:uf_nb} shows the average evolution along the demonstrations of the sum of feedbacks given for all children.
 We noticed that the feedback is first negative and grows towards a positive feedback after each demonstration.
 Children usually gave a positive feedback just before changing the word taught to the robot.
 
-  \begin{figure}
-  	\centering
-  	\includegraphics[width=0.8\linewidth]{figures/plots/evoldemo}
-  	\caption{Evolution of Feedback along the demonstration index}
-  	\label{fig:uf_nb}
-  \end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/plots/evoldemo}
+	\caption{Evolution of Feedback along the demonstration index}
+	\label{fig:uf_nb}
+\end{figure}
  
- The effect of the F-Formation on the feedback from the child was statistically significant ( $F_{1,272}= 4.396, p<0.05$). As, illustrated on Figure \ref{fig:userfeedback_fformation_se}, the average feedback per demonstration was greater($M=0.03, SD=1, N=147$) for the side-by-side condition compare to the face-to-face condition ($M=-0.23, SD=0.98, N=138$).
+The effect of the F-Formation on the feedback from the child was statistically significant ( $F_{1,272}= 4.396, p<0.05$). As, illustrated on Figure \ref{fig:userfeedback_fformation_se}, the average feedback per demonstration was greater($M=0.03, SD=1, N=147$) for the side-by-side condition compare to the face-to-face condition ($M=-0.23, SD=0.98, N=138$).
  \begin{figure}
  	\centering
  	\includegraphics[width=0.6\linewidth]{figures/plots/userfeedback_fformation_se}
@@ -354,6 +364,7 @@ Generally, children understood the dynamics of the interaction, as in general th
  The effect of the F-Formation on the with-me-ness of the child was statistically significant ( $F_{1,15983}= 293.2, p<0.001$). The with-me-ness was greater($M=0.79, SD=0.18, N=7722$) for the face-to-face condition compare to the side-by-side condition ($M=-0.72, SD=0.21, N=8267$) (see Figure \ref{fig:withmeness_fformation_ci}).
  This result was expected, as the robot was facing the robot, its face was more visible for the child.
 
+
 Again, we observed an order effect with the withmeness increasing between the two session. 
 As children were more confordable with the system, it is logic that they started to learn the dynamics of the interaction knwoing when to look at the selection tablet, the writing tablet and the robot. 
 %todo add stats
@@ -373,7 +384,7 @@ As children were more confordable with the system, it is logic that they started
 %\label{fig:score_alone_ci}
 %\end{figure}
 \subsubsection{Response Time and Writing Time}
-Figure \ref{fig:times} shows on the left the average number of demonstration for each word thought to the robot for the two spatial arrangement conditions. 
+Figure \ref{fig:times} shows on the left the average number of demonstration for each word taught to the robot for the two spatial arrangement conditions. 
 There was no significant difference between the conditions even-though the average number of demonstration given by the child in the side-by-side condition seems higher than the face-to-face.
 
 The centrer graph of Figure \ref{fig:times} shows the average response time for the demonstration provided by the children for the two spatial arrangement conditions.
@@ -432,7 +443,7 @@ Score Decreases &	0.15 / \emph{0.32}	& 0.42 / \emph{0.28} \\
 		\caption{Side by Side spatial formation}
 		\label{fig:sbsstate}
 	\end{subfigure}
-	\caption{Transitions states from Score evolutions ($S+$ : score increases compared to previous score, $S-$: score decreases compare to the previous) to children's feedback}
+	\caption{Transitions states from score evolutions ($S+$ : score increasing compared to previous score, $S-$: score decreasing compare to the previous) to children's feedback (thumb up: positive feedback, thumb down : negative feedback, and no feedback given)}
 	\label{fig:state}
 \end{figure*}
 
@@ -496,7 +507,7 @@ Research Robotics.
 
 
 
-
+\small
 \bibliographystyle{abbrv}
 \bibliography{fformation_cowriter}
 
