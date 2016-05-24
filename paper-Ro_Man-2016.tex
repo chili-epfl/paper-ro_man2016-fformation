@@ -51,7 +51,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc}
 \usetikzlibrary{shapes.geometric, arrows}
-% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{color}
 \definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
 \definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
@@ -96,13 +96,12 @@ Child-Robot Spatial Arrangement in a Learning by Teaching Activity}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-In this paper, we present an experiment in the context of a child-robot interaction where we study the influence of the child-robot spatial arrangement on the child's focus of attention and the perception of the robot's performance in the ``''Co-Writer learning by teaching'' activity.
-In this activity, the child teaches a Nao robot how to handwrite.
-In an educational child robot interaction, face-to-face spatial arrangements are usually set.
-We explored two spatial conditions from Kendon's F-formation, the side-by-side and the face-to-face formations in a within subject experiment.
-We estimated the gaze behaviour of the child and the consistency of their grading of the robot with regard to the robot's progress in writing. 
+In this paper, we present an experiment in the context of a child-robot interaction where we study the influence of the child-robot spatial arrangement on the child's focus of attention and the perception of the robot's performance. In the ``''Co-Writer learning by teaching'' activity, the child teaches a Nao robot how to handwrite.
+Usually only face-to-face spatial arrangements are tested in educational child robot interactions, but we explored two spatial conditions from Kendon's F-formation, the side-by-side and the face-to-face formations in a within subject experiment.
+We estimated the gaze behaviour of the child and their consistency in grading the robot with regard to the robot's progress in writing. 
 Even-though the demonstrations provided by children were not different between the two conditions (i.e. the robot's learning didn't differ),  the results showed that in the side-by-side condition children tended to be more indulgent with the robot's mistakes and to give it better feedback.
-These results will allow us to take into account the variability of the judgement of the children relatively to the robot's performances.
+These results highlight the influence of experimental choices in child-robot interaction.
+%These results will allow us to take into account the variability of the judgement of the children relatively to the robot's performances.
 \end{abstract}
 
 
@@ -110,13 +109,13 @@ These results will allow us to take into account the variability of the judgemen
 \section{INTRODUCTION}
 
 Application of robots in learning tasks has been increasing and has shown very promising results these past ten years. 
-R-learning, in reference to e-learning, aims to design robots that would be helpful for learning.
-In our research context, we consider the problem of how robots could enhance the effectiveness of education.
+\emph{R-learning}, in reference to e-learning, aims to design robots that would be helpful for learning.
+%In our research context, we consider the problem of how robots could enhance the effectiveness of education.
 The potential of robots for individual adaptation and their ability to handle repetitive tasks makes them fit well in the educational world.
 In that vein, the Co-Writer projects aims to help children with difficulties in handwriting \cite{hood2015when}.
 It is based on the idea of ``learning by teaching''.
-Under this paradigm, by teaching a robot (the Nao, in our case) how to write, children learn and improve their handwriting at the same time.
-The activity also plays with the protégé effect, which makes children more motivated in practising for the robot than for themselves.
+Under this paradigm, by teaching a robot (Nao from Aldebaran) how to write, children learn and improve their handwriting at the same time.
+The activity also plays with the \emph{protégé effect}, which makes children more motivated in practising for the robot than for themselves.
 
 Previous studies in the Co-Writer project helped to develop a system that generates handwriting for the robot based on demonstrations from the child\cite{hood2015when}.
 Case studies presented in \cite{jacq2016building} showed that children were able to stay engaged in long term interactions with repeated sessions within the Co-Writer activity in real pedagogical/therapeutic contexts.
@@ -130,38 +129,35 @@ This study varied from other works in educational human-robot interaction in a w
 As robots are entering our living space, they must adapt to our social norms.
 These norms vary from politeness to unspoken social rules (as for instance, the personal space of a person).
 In home environments, robots will be expected to perform their functions in a manner that is clearly understandable and predictable by the humans around.
-This requires adaptive personalisation of the robot to the individual needs of the humans, but also to the task being performed currently.
-Some previous studies have shown that the spatial setting with a robot was also a way to convey non-verbal messages and it serves to influence the relationship with the user\cite{Takayama2009,kristoffersson2013measuring}. 
+This requires adaptive personalisation of the robot to the individual needs of the humans, but also to the task being currently performed.
+Some previous studies showed that the spatial setting with a robot was also a way to convey non-verbal messages and it serves to influence the relationship with the user\cite{Takayama2009,kristoffersson2013measuring}. 
+Spatial arrangement is still a factor relatively unexplored in HRI and its influence on the interaction is still unclear. 
 
-In this study, we want to explore the effect of spatial arrangement on the child-robot interaction within the Co-Writer activity.
+In this study, we explore the effect of spatial arrangement on the child-robot interaction within the Co-Writer activity.
 
 \section{RELATED WORKS}
 Spatial configuration is part of non-verbal cues of interpersonal stance.
 Spatial arrangement is also a social signal that tells about the relationship between people.
-Hall \cite{hall} has proposed to divided the interpersonal space according to the distance between the individuals (intimate - the closer, personal social and public).
-
-
-
 Kendon \cite{Kendon2010} called the F-Formation a spatial-orientational system that aims to explain how people arrange themselves in a group interaction.
 %According to Kendon, the way people arrangement themselves during an interaction reflects their engagement and involvement with the other persons. 
 Kendon proposed three main F-formations : face-to-face (or vis-a-vis), L shape and side-by-side. These formations are illustrated by Figure \ref{fig:fformations}.
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\begin{subfigure}{0.2\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{./figures/fformationff.png}
+		\includegraphics[width=0.75\linewidth]{./figures/fformationff.png}
 		\caption{Face to face}
 		\label{fig:ff}
 	\end{subfigure}%
 	\begin{subfigure}{0.2\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{./figures/fformationL.png}
+		\includegraphics[width=0.75\linewidth]{./figures/fformationL.png}
 		\caption{L-Shape}
 		\label{fig:lshape}
 	\end{subfigure}
 	\begin{subfigure}{0.2\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{./figures/fformationss.png}
+		\includegraphics[width=0.75\linewidth]{./figures/fformationss.png}
 		\caption{Side by Side }
 		\label{fig:sidebside}
 	\end{subfigure}
@@ -177,37 +173,29 @@ It could also predispose the person to either competitive (face to face) or coop
 In educational child-robot interaction, quite often, the robot is placed as a tutor or a peer helping the child, and uses social capabilities to enhance the learning \cite{Saerbeck2010}.
 Kanda \cite{Kanda2004} reported an experiment involving children that learns from a robot as they would from a peer.
 In this other experiment,
-\cite{Leyzberg2014} showed in a face to face setting that the physical presence of the robot produced measurable learning gains.
+\cite{Leyzberg2014} showed in a face-to-face setting that the physical presence of the robot produced measurable learning gains.
 \cite{Kennedy2015} confirmed these results but recommended caution when applying social behaviours in a tutoring context. 
 %explain why caution
 
-
 Spatial arrangements have been studied in previous research\cite{Kuzuoka,huttenrauch2006investigating,vazquez2014spatial} in HRI, often as a challenge of path planning, or as a metric but less frequently as a non-verbal cue of communication in a learning task.
-
-
 
 We propose to study the impact of spatial arrangement on the engagement of children in a handwriting task.
 We performed a study in a school with 12 children performing the same teaching task under two conditions.
 The child was either facing the robot (similar to other tutoring experiments) or was sitting next to the robot (as a peer teaching setup).
 
 
-
-%We also wanted to study the influence of being in a group or alone when interacting with the robot.
-%At the difference from the group configuration, in the group configuration, other children were witnessing the interaction with the child.
-
-
 \section{METHOD}
 The experiment took place in a primary school in Switzerland where children are taught in English.
-In this experiment, we targeted children aged 5 who start handwriting at that age, but do not typically master it yet.
-The children interacted with the robot under two conditions of the F-Formation in a random order.
+In this experiment, we targeted children aged 5 y.o. who start handwriting, but do not typically master it yet.
+The children interacted with the robot under two conditions of the F-Formation in a counterbalanced manner.
 
 Our goal was to investigate the effect of spatial arrangement on the interaction.
 We expected that children would give better feedback to the
 when teaching it in a side-by-side configuration for several reasons.
-The side-by-side arrangement corresponds to a peer teaching arrangement, unlike the face-to-face teaching arrangement, which is more frequent seen in a teacher-student relationship.
-Also, in the side-by-side formation, the robot and the child have the same perspective of the shared tablet on which they write.
+The side-by-side arrangement corresponds to a cooperative arrangement which is close to a peer teaching setting, unlike the face-to-face teaching arrangement, which is more frequent seen in competitive or conversation tasks (closer to a teacher-student relationship).
+Also, in the side-by-side formation, the robot and the child have the same visual perspective of the shared tablet on which they write.
 Perspective sharing is an ability that facilitates mutual understanding \cite{berlin2006perspective}.
-Hence by having the robot and the child side-by-side, the mutual understanding would be eased.
+Hence by having the robot and the child side-by-side, higher mutual understanding would be expected.
 
 \subsection{Participants and Apparatus}
 12 subjects (six girls) from the same classroom (aged 5 to 6 y.o.) participated to the within subject study.
@@ -218,25 +206,26 @@ Children were presented the two conditions sequentially with and interval of thr
 \centering
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{./figures/f2f_photot.png}
+  \includegraphics[width=0.7\linewidth]{./figures/f2f_photot.png}
   \caption{Face to face spatial formation}
   \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{./figures/s2s_photo2t.jpg}
+  \includegraphics[width=0.7\linewidth]{./figures/s2s_photo2t.jpg}
   \caption{Side by Side spatial formation}
   \label{fig:sub2}
 \end{subfigure}
  \caption{Experimental set-ups showing the \emph{with-me-ness} targets in the rectangles: orange - the writing tablet,  blue - the robot's head, green - the tablet used to select a word to teach to the robot}
 \label{fig:test}
 \end{figure*}
+
 Apart from this change in the spatial setting, the interaction was kept the same. 
 The children were told they had to teach the robot how to write some words. 
 We briefly presented the two tablet interfaces and the interaction started.
 Any word from a list displayed on the selection tablet could be picked by the child.
 As the robot would start to write this word. It was set to be a very bad writer at the beginning of the first session for each child.
-The child could then give a feedback to the robot by pressing thumbs up or a thumbs down buttons how many time they wanted.
+The child could then give a feedback to the robot by pressing thumbs up or a thumbs down buttons how many times they wanted.
 The child would then use a pen and demonstrate how to write the word and the robot would then rewrite the word using the demonstration of the child.
 The generated writing of the robot was computed to be halfway from its previous writing state and the new demonstration provided by the child.
 
@@ -261,25 +250,24 @@ The inclusion of the targets in the VFoA allows then to compute the \emph{with-m
 In a simple way, the \emph{with-me-ness} value will increase if the child looks at the specific set of targets, or else it decreases.
 This measure allows us to see if the child is engaged in the interaction and is looking at the tablet or the robot's head when he/she should.
 Indeed, in our learning by teaching activity, the robot has also a hidden pedagological role. It's progress aim actually to make the child practice and think about his/her own way of writing. 
-In that sens, we can set attentional targets as proposed by \cite{sharma2014me} when the \emph{with-me-ness} was first introduced for Computer Supported Collaborative Learning.
+In that sense, we can set attentional targets as proposed by \cite{sharma2014me} when the \emph{with-me-ness} was first introduced for Computer Supported Collaborative Learning.
 
 This measure is actually very close to the notion of synchrony already studied in HRI \cite{delaherche2012interpersonal}, where bounding between individuals is reflected by their ability to synchronize in the task (look at the same time at the same targets).
 
 For this experiment, the targets were: "the observer"(a teacher or a teacher assistant),"the experimenter",  "the selection tablet"(the tablet used to pick a word) and the "tablet".
 The with-me-ness is initially set to 0.5 and takes values from 0 to 1.
-According to the state in which the activity is, (robot is writing, child is writing,\dots) the with-me-ness will be increased if the child looks at a target that is in the set of targets that are optimum within this particular state of the activity.
+According to the state in which the activity is, (robot is writing, child is writing,\dots) the with-me-ness will be increased if the child looks at a target that is in the set of task-related targets (expected within this particular state of the activity).
 We record these targets and the with-me-ness at a frequency of about $1Hz$.
-The evolution of the withmeness is computationaly attenuated in order to remove noisy data and we set a weight on the update at 10\% (90\% is the previous state).
+The evolution of the withmeness is computationaly attenuated in order to remove noisy data (by using the weighted cumulative of the withmeness value).
 
 
-The targets are defined according to their spatial relation with the camera used (placed on the table at the robot's feet).
+The targets were defined according to their spatial relation with the camera used (placed on the table at the robot's feet).
 The position of the targets was changed according to the F-formation condition, but the camera stayed at the same position
 Figure \ref{fig:test} shows these targets for the two conditions.
 
-%todo boucle avec Hypo
 
 \subsection{Reward Mechanism}
-The tablet interface on which the child and the robot practice their handwriting also contains two buttons that allow the child to give a positive (green thumb-up) or negative (red thumb-down) feedback to the robot's handwriting.
+The tablet interface on which the child and the robot practice their handwriting shows two buttons that allow the child to give a positive (green thumb-up) or negative (red thumb-down) feedback to the robot's handwriting.
 After every trial of the robot, the child could click on these feedback buttons as much as he/she wants.
 We monitored each of these clicks.
 
@@ -299,44 +287,45 @@ These measure were cues to how dedicated the child was in the task
 \subsubsection{Writing Score for the Robot}
 %Regularity of writing in time
 Since the learning algorithm took as input the child's demonstration, if the child provided repeatedly the exact same demonstration, then the robot would converge faster to his/her handwriting.
-This score is hence a hint on children's regularity, with the underlying assumption that the regularity handwriting is a sign of progress.
-Since children are teaching the robot, they may judge the robot's handwriting according to their provided demonstration, and compare simply their demonstration with the robot's.
+This score is hence a hint on children's regularity, with the underlying assumption that the regularity in handwriting is a sign of legibility.
+%Since children are teaching the robot, they may judge the robot's handwriting according to their provided demonstration, and compare simply their demonstration with the robot's.
 
 At each demonstration of the robot, we were calculating a \emph{writing score}. 
 Each demonstration was encoded as a list of seventy 2D points.
 This \emph{writing score} is the euclidian distance between the demonstrated letter by the child and the generated letter by the robot.
 
 We also computed the evolution of this score at each demonstration.
-We represent the evolution of the robot's handwriting with different states:
+We represented the evolution of the robot's handwriting with different states:
 'S=': the first trial of this word by the robot, 'S-': the score is decreasing and 'S+' the score is increasing. 
-If the child change a lot his/her way of writing between consecutives demonstration, the score would then deacrease.
+If the child was changing a lot his/her way of writing between consecutives demonstration, the score would then deacrease.
 In the contrary, the regularity of the demonstration would make the score increase rapidly.
 
 
 \section{RESULTS}
 %The effect of IV on DV was statistically significant ($F_{a,b}= C, p<d*$). 
 %The effect of IV on DV was not statistically significant ($F_{a,b}= C, ns$). 
-In this section, we present results from this study on 12 children that interacted with the robot twice in the two conditions (side-by-side and face-to-face).
-We studied the impact on the F-formation on the reward given with the buttons, the performance and the with-me-ness.
+%In this section, we present results from this study on 12 children that interacted with the robot twice in the two conditions (side-by-side and face-to-face).
+%We studied the impact on the F-formation on the reward given with the buttons, the performance and the with-me-ness.
 
 \subsection{Reward Mechanism}
-Children well understood that they were teaching the robot and often gave bad scores for the first untrained trial of the robot.
 Children gave feedback with an average of 3 feedbacks per demonstration.
-Figure \ref{fig:uf_nb} shows the average evolution along the demonstrations of the sum of feedbacks given for all children.
+Figure \ref{fig:uf_nb} shows the average evolution along the demonstrations of the sum of feedbacks given for all children and for both spatial condition.
 We noticed that the feedback is first negative and grows towards a positive feedback after each demonstration.
+In average for all the children, the sum of feedbacks stayed negative until the 5th demonstration.
+Children well understood that they were teaching the robot and often gave bad scores for the first untrained trial of the robot.
 Children usually gave a positive feedback just before changing the word taught to the robot.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{figures/plots/evoldemo}
+	\includegraphics[width=0.75\linewidth]{figures/plots/evoldemocondbis}
 	\caption{Evolution of Feedback along the demonstration index}
 	\label{fig:uf_nb}
 \end{figure}
- 
-The effect of the F-Formation on the feedback from the child was statistically significant ( $F_{1,272}= 4.396, p<0.05$). As, illustrated on Figure \ref{fig:userfeedback_fformation_se}, the average feedback per demonstration was greater($M=0.03, SD=1, N=147$) for the side-by-side condition compare to the face-to-face condition ($M=-0.23, SD=0.98, N=138$).
+Eventhough the average feedback was incrasing along with the number of demonstration for both condition, they don't seems to increase the same way(see Figure\ref{fig:uf_nb})
+The effect of the F-Formation on the feedback from the child was statistically significant (Anova Reapted mesures within subjects: $F_{1,272}= 4.396, p<0.05$). As, illustrated on Figure \ref{fig:userfeedback_fformation_se}, the average feedback per demonstration was greater($M=0.03, SD=1, N=147$) for the side-by-side condition compare to the face-to-face condition ($M=-0.23, SD=0.98, N=138$).
  \begin{figure}
  	\centering
- 	\includegraphics[width=0.6\linewidth]{figures/plots/userfeedback_fformation_se}
+ 	\includegraphics[width=0.58\linewidth]{figures/plots/userfeedback_fformation_se}
  	\caption{Feedback According to the F-Formation}
  	\label{fig:userfeedback_fformation_se}
  \end{figure}
@@ -345,7 +334,7 @@ Children kept giving feedback along the interaction and no drop in the number of
 They took their duty to teach the robot seriously in that way.
 
 We also observe an order effect showing that children tended to give higher feedback in the second session compare to the first one.
-%todo see if add significance here 
+%todo see if adding test
 This can simply be explained by the fact that the robot's learning state was progressive between the two session. 
 The robot didn't start to learn from scratch in the second session but had already some knowledge from the first session with this same child. 
 
@@ -354,19 +343,19 @@ The robot didn't start to learn from scratch in the second session but had alrea
 
 
 \subsection{With-me-ness}
-Generally, children understood the dynamics of the interaction, as in general the with-me-ness stayed above 0.5 throughout the interaction (started et 0.5 but always finished above).
+Children understood the dynamics of the interaction, as in general the with-me-ness stayed above 0.5 throughout the interaction (started et 0.5 but always finished above).
 \begin{figure}	
 \centering
 \includegraphics[width=0.6\linewidth]{figures/plots/withmeness_fformation_ci}
 \caption{With-me-ness According to the F-Formation (Means and Confidence Intervals)}
 \label{fig:withmeness_fformation_ci}
 \end{figure}
- The effect of the F-Formation on the with-me-ness of the child was statistically significant ( $F_{1,15983}= 293.2, p<0.001$). The with-me-ness was greater($M=0.79, SD=0.18, N=7722$) for the face-to-face condition compare to the side-by-side condition ($M=-0.72, SD=0.21, N=8267$) (see Figure \ref{fig:withmeness_fformation_ci}).
+ The effect of the F-Formation on the with-me-ness of the child was statistically significant (Anova Reapted mesures within subjects: $F_{1,15983}= 293.2, p<0.001$). The with-me-ness was greater($M=0.79, SD=0.18, N=7722$) for the face-to-face condition compare to the side-by-side condition ($M=-0.72, SD=0.21, N=8267$) (see Figure \ref{fig:withmeness_fformation_ci}).
  This result was expected, as the robot was facing the robot, its face was more visible for the child.
 
 
-Again, we observed an order effect with the withmeness increasing between the two session. 
-As children were more confordable with the system, it is logic that they started to learn the dynamics of the interaction knwoing when to look at the selection tablet, the writing tablet and the robot. 
+Again, we observed an order effect with the withmeness increasing between the two sessions. 
+As children were more confordable with the system, it is logic that they started to learn the dynamics of the interaction knowing when to look at the selection tablet, the writing tablet and the robot. 
 %todo add stats
 %	session	N	new_w	sd	se	ci
 %	1	1	8886	0.7248584	0.2175269	0.002307596	0.004523421
@@ -390,9 +379,11 @@ There was no significant difference between the conditions even-though the avera
 The centrer graph of Figure \ref{fig:times} shows the average response time for the demonstration provided by the children for the two spatial arrangement conditions.
 The response time is the delay between the time when the robot finishes to write and the time when the child touches the tablet.
 There was no significant difference between the conditions.
+% ($F(1,11)=0, p=0.986$).
  
 The writing time (right graph on Figure \ref{fig:times}) corresponds to the delay between the time when the robot finishes its trial and the time the child finishes its new demonstration or changes word. This time also include the moment in which the child can give a feedback via the buttons.
-No significant difference in the writing time was found. 
+No significant difference in the writing time was found.
+%($F(1,11)=1.507, p=0.24$). 
 
 \begin{figure*}[ht]
 	\centering
@@ -408,13 +399,17 @@ The spatial condition didn't influence the involvement of the child in the task.
 % The effect of the group variable on the score of the child was statistically significant ( $F_{1,279}= 6.928, p<0.01$). The score was greater($M=0.41, SD=0.11, N=141$) in  the alone condition compare to the group condition ($M= 0.37, SD=0.11, N=140$).
 %These results confirm the fact that the robot is better suited here for individual interaction. 
 \subsubsection{Writing Score for the Robot}
-There was no significant difference of score in the F-formation condition tested (side-by-side:$M=0.80, SD=0.08, N=135$, face-to-face: $M=0.79, SD=0.08, N=191$).
+There was no significant difference of writing score in the F-formation condition tested (side-by-side:$M=0.80, SD=0.08, N=135$, face-to-face: $M=0.79, SD=0.08, N=191$, Anova Reapted mesures within subjects:$p>0.1$).
 This result means that the children were teaching as well in the face-to-face condition as in the side-by-side condition.
 However, results showed significant differences in terms of feedback given to the robot regarding the score of the robot.
+
+We analysed the probabilities of succeding events considering feedback events and score evolution events.
+
 Table~\ref{proba} shows the probabilities of transition from after the score increases and after the score decreases.
-When the score increases, we see that in the face-to-face condition, the probability of positive feedback is smaller than in the side-by side condition.
-On the contrary, the probability of having a negative feedback after the score having decreased is higher in the face-to-face condition.
-We can also notice that when the score decreases, the probability of having a positive feedback is twice higher in the side-by-side condition
+We notice that in general the positive feedback probalities are higher for the side-by-side condition in comparison to the face-to-face. 
+On the contrary, the probability of having a negative feedback after is higher in the face-to-face condition.
+We can also notice that when the score decreases, the probability of having a positive feedback is almost twice higher in the side-by-side condition (total number of events $= $).
+
 
 \begin{table}[ht!]
 \centering
@@ -424,22 +419,23 @@ We can also notice that when the score decreases, the probability of having a po
 \toprule
 Score event & Positive Feedback & Negative Feedback \\
 \midrule
-Score Increases & 	0.16 / \emph{0.27}	& 0.46 / \emph{0.47} \\
-Score Decreases &	0.15 / \emph{0.32}	& 0.42 / \emph{0.28} \\
+Score Increases & 	0.37 / \emph{0.44}	& 0.38 / \emph{0.27} \\
+Score Decreases &	0.27 / \emph{0.46}	& 0.36 / \emph{0.20} \\
 \bottomrule
 \end{tabular}
 \end{table}
+
 \begin{figure*}
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{./figures/faceface_score}
+		\includegraphics[width=0.8\linewidth]{./figures/states/states_f2f}
 		\caption{Face to face spatial formation}
 		\label{fig:f2fstate}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{./figures/sidebiside_score}
+		\includegraphics[width=0.8\linewidth]{./figures/states/statess_sbs}
 		\caption{Side by Side spatial formation}
 		\label{fig:sbsstate}
 	\end{subfigure}
@@ -451,6 +447,7 @@ All the transitions between the scores and the feedback buttons are illustrated 
 Children were displaying a more positive attitude towards the robot when placed in side-by-side position.
 This positive attitude was showed by rewarding more improvements of the robot and also penalising less the retrogression of the robot's writing.
 Children even rewarded retrogression more often in the side-by-side condition.
+These differences in the transition matrix were not significant (Pearson's Chi-squared test, $X-squared = 30, df = 25, p-value = 0.2243$) and a study with a larger number of participants might have given more precise results.
 
 
 
@@ -462,16 +459,17 @@ Our results showed that even if the robot's learning didn't vary between the sid
 This suggests that the relationship between the child and the robot was different between the conditions.
 These results are in line with the literature in spatial arrangement and non-verbal social cues.
 
-We noticed that the children were expecting the robot to react to the feedback.
+While running the experiments, we noticed that the children were expecting the robot to react to the feedback, and the robot was moving only when writing. 
 We are working on different form of reactions for future experiments to allow the robot to react according to the feedback from the child and also in perspective with the fairness of the feedback regarding the score of the robot.
 For instance, if the child gives a positive feedback when the robot is actually improving, the robot should display a positive emotion.
-If it is given a positive feedback but does not actually make any progress, he might express doubt to force the child to be more exigent. 
+If it is given a positive feedback but does not actually make any progress, it might express doubt to force the child to be more exigent. 
 
-Some limitations are however to be noticed. 
-In this experiment, the robot was moving only when writing. 
-Even if our results showed that the side-by-side elicited more positive feedback from the children, in the case where the robot would display some emotional reaction during the interaction, the same effect might not be observed. 
-We plan to enhance the interaction with such reaction and to research the effect of such reactions on the child's perception of the robot's progresses. 
+
+Even if our results showed that the side-by-side elicited more positive feedback from the children, statistical significance was not reached, and if the robot would display some emotional reaction during the interaction, the same effect might not be observed. 
+We plan to enhance the interaction with some behavioural reaction and to research the effect of such reactions on the child's perception of the robot's progresses. 
 Long term studies might also bring more insights to theses results in order to see if the effect of the spatial arrangement sustain over time.
+
+To conclude, we believe that spatial arragement can be used as a non-verbal cue of communication to contextualise the interaction (as cooperative or competitive for instance).
 %discuss results regarding the literature, same ? different arguments for/against initial premise, limitations, etc.
 
 
