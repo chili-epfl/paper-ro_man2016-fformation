@@ -28,7 +28,7 @@
 %\graphicspath{}
 %\usepackage[utf8]{inputenc}
 \usepackage{slashbox}
-\setlength{\belowcaptionskip}{-8pt}
+\setlength{\belowcaptionskip}{-11pt}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -78,7 +78,7 @@
 Child-Robot Spatial Arrangement in a Learning by Teaching Activity}
 
 
-\author{Wafa Johal$^{1}$$^{2}$, Alexis Jacq$^{1}$$^{3}$, Ana Paiva$^{3}$ and Pierre Dillenbourg$^{1}$  % <-this % stops a space
+\author{Wafa Johal$^{1,}$$^{2}$, Alexis Jacq$^{1,}$$^{3}$, Ana Paiva$^{3}$ and Pierre Dillenbourg$^{1}$  % <-this % stops a space
 \thanks{}% <-this % stops a space
 \thanks{$^{1}$ CHILI Lab,
 	$^{2}$ LSRO Lab,
@@ -210,7 +210,7 @@ Children were presented the two conditions sequentially with and interval of thr
 \centering
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=0.7\linewidth]{./figures/f2f_photot.png}
+  \includegraphics[width=0.7\linewidth]{./figures/f2f_photott.jpg}
   \caption{Face to face spatial formation}
   \label{fig:sub1}
 \end{subfigure}%
@@ -262,7 +262,7 @@ For this experiment, the targets were: "the observer"(a teacher or a teacher ass
 The with-me-ness is initially set to 0.5 and takes values from 0 to 1.
 According to the state in which the activity is, (robot is writing, child is writing,\dots) the with-me-ness will be increased if the child looks at a target that is in the set of task-related targets (expected within this particular state of the activity).
 We record these targets and the with-me-ness at a frequency of about $1Hz$.
-The evolution of the withmeness is computationally attenuated in order to remove noisy data (by using the weighted cumulative of the withmeness value).
+The evolution of the with-me-ness is computationally attenuated in order to remove noisy data (by using the weighted cumulative of the with-me-ness value).
 
 
 The targets were defined according to their spatial relation with the camera used (placed on the table at the robot's feet).
@@ -364,8 +364,8 @@ Children understood the dynamics of the interaction, as in general the with-me-n
  This result was expected, as the robot was facing the robot, its face was more visible for the child.
 
 
-Again, we observed an order effect with the withmeness increasing between the two sessions. 
-As children were more confordable with the system, it is logic that they started to learn the dynamics of the interaction knowing when to look at the selection tablet, the writing tablet and the robot. 
+Again, we observed an order effect with the with-me-ness increasing between the two sessions. 
+As children were more comfortable with the system, it is logic that they started to learn the dynamics of the interaction knowing when to look at the selection tablet, the writing tablet and the robot. 
 %todo add stats
 %	session	N	new_w	sd	se	ci
 %	1	1	8886	0.7248584	0.2175269	0.002307596	0.004523421
@@ -374,7 +374,14 @@ As children were more confordable with the system, it is logic that they started
 %Df Sum Sq Mean Sq F value Pr(>F)    
 %session       1   12.8  12.797   339.8 <2e-16 ***
 %Residuals 15985  602.0   0.038        
-
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[width=0.25\linewidth]{figures/plots/repetition_fformation_ci}
+	\includegraphics[width=0.25\linewidth]{figures/plots/responseTime_fformation_ci}
+	\includegraphics[width=0.25\linewidth]{figures/plots/writingTime_fformation_ci2}
+	\caption{Number of demonstration per word (left), response time (center), writing time (right) - (Means and Confidence Intervals)}
+	\label{fig:times}
+\end{figure*}
 \subsection{Performances}
 %\begin{figure}
 %\centering
@@ -395,45 +402,12 @@ The writing time (right graph on Figure \ref{fig:times}) corresponds to the dela
 No significant difference in the writing time was found.
 %($F(1,11)=1.507, p=0.24$). 
 
-\begin{figure*}[ht]
-	\centering
-	\includegraphics[width=0.25\linewidth]{figures/plots/repetition_fformation_ci}
-	\includegraphics[width=0.25\linewidth]{figures/plots/responseTime_fformation_ci}
-	\includegraphics[width=0.25\linewidth]{figures/plots/writingTime_fformation_ci2}
-	\caption{Number of demonstration per word (left), response time (center), writing time (right) - (Means and Confidence Intervals)}
-	\label{fig:times}
-	\end{figure*}
+
 
 These results show that children when not spending more time per word in one condition of the other. 
 The spatial condition didn't influence the involvement of the child in the task. 
 % The effect of the group variable on the score of the child was statistically significant ( $F_{1,279}= 6.928, p<0.01$). The score was greater($M=0.41, SD=0.11, N=141$) in  the alone condition compare to the group condition ($M= 0.37, SD=0.11, N=140$).
 %These results confirm the fact that the robot is better suited here for individual interaction. 
-\subsubsection{Writing Score for the Robot}
-There was no significant difference of writing score in the F-formation condition tested (side-by-side:$M=0.80, SD=0.08, N=135$, face-to-face: $M=0.79, SD=0.08, N=191$, Anova Repeated measures within subjects:$p>0.1$).
-This result means that the children were teaching as well in the face-to-face condition as in the side-by-side condition.
-However, results showed significant differences in terms of feedback given to the robot regarding the score of the robot.
-
-We analyzed the probabilities of succeeding events considering feedback events and score evolution events.
-
-Table~\ref{proba} shows the probabilities of transition from after the score increases and after the score decreases.
-We notice that in general the positive feedback probabilities are higher for the side-by-side condition in comparison to the face-to-face. 
-On the contrary, the probability of having a negative feedback after is higher in the face-to-face condition.
-We can also notice that when the score decreases, the probability of having a positive feedback is almost twice higher in the side-by-side condition (total number of events $= $).
-
-
-\begin{table}[ht!]
-\centering
-\caption{\small Probability of feedback given the score per word in  the two conditions : face-to-face / \emph{side-by-side}}
-\label{proba}
-\begin{tabular}{l|p{1.3cm}|p{1.3cm}|p{1.2cm}}
-\toprule
-\backslashbox{Score Event}{Feedback} & Positive  & Negative & None \\
-\midrule
-Score Increases & 	0.37 / \emph{0.44}	& 0.39 / \emph{0.27} & 0.24 / \emph{0.29} \\
-Score Decreases &	0.28 / \emph{0.47}	& 0.36 / \emph{0.20} & 0.36 / \emph{0.33} \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \begin{figure*}
 	\centering
@@ -452,6 +426,37 @@ Score Decreases &	0.28 / \emph{0.47}	& 0.36 / \emph{0.20} & 0.36 / \emph{0.33} \
 	\caption{Transitions states from score evolutions ($S+$ : score increasing compared to previous score, $S-$: score decreasing compare to the previous) to children's feedback (thumb up: positive feedback, thumb down : negative feedback, and no feedback given)}
 	\label{fig:state}
 \end{figure*}
+
+\subsubsection{Writing Score for the Robot}
+There was no significant difference of writing score in the F-formation condition tested (side-by-side:$M=0.80, SD=0.08, N=135$, face-to-face: $M=0.79, SD=0.08, N=191$, Anova Repeated measures within subjects:$p>0.1$).
+This result means that the children were teaching as well in the face-to-face condition as in the side-by-side condition.
+However, results showed significant differences in terms of feedback given to the robot regarding the score of the robot.
+
+We analyzed the probabilities of succeeding events considering feedback events and score evolution events.
+
+\begin{table}[ht!]
+	\centering
+	\caption{\small Probability of feedback given the score per word in  the two conditions : face-to-face / \emph{side-by-side}}
+	\label{proba}
+	\begin{tabular}{l|p{1.3cm}|p{1.3cm}|p{1.2cm}}
+		\toprule
+		\backslashbox{Score Event}{Feedback} & Positive  & Negative & None \\
+		\midrule
+		Score Increases & 	0.37 / \emph{0.44}	& 0.39 / \emph{0.27} & 0.24 / \emph{0.29} \\
+		Score Decreases &	0.28 / \emph{0.47}	& 0.36 / \emph{0.20} & 0.36 / \emph{0.33} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Table~\ref{proba} shows the probabilities of transition of feedback events (positive or negative) after the score increases or after the score decreases (computed using Markov Chain).
+We notice that in general the positive feedback probabilities are higher for the side-by-side condition in comparison to the face-to-face. 
+On the contrary, the probability of having a negative feedback after is higher in the face-to-face condition.
+We can also notice that when the score decreases, the probability of having a positive feedback is almost twice higher in the side-by-side condition (total number of events $= $).
+
+
+
+
+
 
 All the transitions between the scores and the feedback buttons are illustrated on Figure \ref{fig:state}.
 Children were displaying a more positive attitude towards the robot when placed in side-by-side position even when the robot was not improving.
@@ -482,7 +487,7 @@ Even if our results showed that the side-by-side elicited more positive feedback
 We plan to enhance the interaction with some behavioral reaction and to research the effect of such reactions on the child's perception of the robot's progresses. 
 Long term studies might also bring more insights to theses results in order to see if the effect of the spatial arrangement sustain over time.
 
-To conclude, we believe that spatial arrangement can be used as a non-verbal cue of communication to contextualize the interaction (as cooperative or competitive for instance).
+To conclude, we believe that spatial arrangement can be used as a non-verbal cue of communication to contextualize the interaction (as cooperative or competitive for instance). We also believe that choices in terms of spatial arrangements in HRI studies should be thoroughly made as they may influence the interaction. 
 %discuss results regarding the literature, same ? different arguments for/against initial premise, limitations, etc.
 
 
@@ -521,7 +526,7 @@ Research Robotics.
 
 
 \small
-\bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
 \bibliography{fformation_cowriter}
 
 
